@@ -174,7 +174,7 @@ This is **Project 03** in my [AI Lab](https://amitwebsite.online/lab.html) — h
 
 | Project | Status | Description |
 |---|---|---|
-| 01 | ✅ Live | This website — Agentic DevOps with Claude Code |
+| 01 | ✅ Live | amitwebsite.online — Agentic DevOps with Claude Code |
 | 02 | ✅ Live | Zero Trust Network Access Lab (ZTNA) - Live Demo|
 | 03 | ✅ Live | AI Digital Twin — this project |
 
