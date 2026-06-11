@@ -63,6 +63,7 @@
       --bg-surface:  #0d1525;
       --border:      #1a2540;
       --cyan:        #00d4ff;
+      --orange:      #E07B39;
       --green:       #22c55e;
       --text-primary:#f0f4ff;
       --text-muted:  #a0aab8;
@@ -99,6 +100,7 @@
       height: 60px;
       flex-shrink: 0;
       z-index: 10;
+      position: relative;
     }
 
     /* Left — identity block */
@@ -149,6 +151,18 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    /* Center tagline */
+    .header-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      color: var(--orange);
+      letter-spacing: 1px;
+      white-space: nowrap;
+      pointer-events: none;
     }
 
     /* Right — status + nav */
@@ -230,7 +244,7 @@
     }
     .nav-mobile a:hover { color: var(--cyan); }
 
-    /* ── Chat workspace — fills everything below header ── */
+    /* ── Chat workspace ── */
     .chat-workspace {
       flex: 1;
       position: relative;
@@ -278,13 +292,15 @@
     @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
 
     /* ── Responsive ── */
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .name-sub  { display: none; }
-      .header    { padding: 0 1rem; height: 56px; }
+    @media (max-width: 768px) {
+      .header-center { display: none; }
     }
-
+    @media (max-width: 640px) {
+      .nav-links  { display: none; }
+      .hamburger  { display: flex; }
+      .name-sub   { display: none; }
+      .header     { padding: 0 1rem; height: 56px; }
+    }
     @media (max-width: 360px) {
       .logo { letter-spacing: 2px; font-size: 12px; }
       .name-primary { font-size: 12px; }
@@ -295,22 +311,22 @@
 
 <div class="app-shell">
 
-  <!-- Single compact header -->
   <header class="header">
 
     <!-- Left: identity -->
     <div class="identity">
       <a href="https://amitwebsite.online" class="logo">AM</a>
       <div class="divider"></div>
-      <img
-        src="amit.jpg"
-        alt="Amit Maurya"
-        class="avatar-photo"
-      >
+      <img src="amit.jpg" alt="Amit Maurya" class="avatar-photo">
       <div class="name-block">
         <span class="name-primary">Amit Maurya</span>
         <span class="name-sub">Digital AI Twin</span>
       </div>
+    </div>
+
+    <!-- Center: tagline -->
+    <div class="header-center">
+      Built with Claude Code &nbsp;·&nbsp; Agentic AI DevOps
     </div>
 
     <!-- Right: status + nav -->
@@ -331,14 +347,14 @@
 
   </header>
 
-  <!-- Mobile nav dropdown -->
+  <!-- Mobile nav -->
   <div class="nav-mobile" id="nav-mobile">
     <a href="https://amitwebsite.online">Home</a>
     <a href="https://amitwebsite.online/lab.html">AI Lab</a>
     <a href="https://amitwebsite.online/contact.html">Contact</a>
   </div>
 
-  <!-- Chat workspace — full remaining height -->
+  <!-- Chat workspace -->
   <div class="chat-workspace">
     <div id="loader">
       <div class="spinner"></div>
