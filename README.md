@@ -170,14 +170,13 @@ Deployed and managed separately via the HuggingFace Space repository. Secrets (`
 
 ## Part of the AI Lab
 
-This is **Project 02** in my [AI Lab](https://amitwebsite.online/lab.html) — hands-on projects demonstrating applied AI and agentic DevOps. Every project is real, deployed, and publicly available.
+This is **Project 03** in my [AI Lab](https://amitwebsite.online/lab.html) — hands-on projects demonstrating applied AI and agentic DevOps. Every project is real, deployed, and publicly available.
 
 | Project | Status | Description |
 |---|---|---|
 | 01 | ✅ Live | This website — Agentic DevOps with Claude Code |
-| 02 | ✅ Live | AI Digital Twin — this project |
-| 03 | 🔜 Coming | LLM Threat Model Template — STRIDE for regulated industries |
-| 04 | 🔜 Coming | Secure AWS Landing Zone — Terraform multi-account |
+| 02 | ✅ Live | Zero Trust Network Access Lab (ZTNA) - Live Demo|
+| 03 | ✅ Live | AI Digital Twin — this project |
 
 ---
 
