@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0K1FTS01N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J0K1FTS01N');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="https://amitwebsite.online/favicon.ico" type="image/x-icon">
+  <title>Amit Maurya — Digital AI Twin</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Amit Maurya's AI Digital Twin — an interactive professional profile. Cloud & AI Security Architect with 14+ years securing mission-critical infrastructure for Lloyds Banking Group and Standard Chartered.">
+  <meta name="keywords" content="Amit Maurya, cloud security architect, AI security, digital twin, AWS, Zero Trust, DevSecOps, Kubernetes">
+  <meta name="author" content="Amit Maurya">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://avatar.amitwebsite.online/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Amit Maurya — Digital AI Twin">
+  <meta property="og:description" content="An interactive AI-powered professional profile for Amit Maurya — Cloud & AI Security Architect with 14+ years at Lloyds Banking Group and Standard Chartered.">
+  <meta property="og:url" content="https://avatar.amitwebsite.online">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avatar.amitwebsite.online/amit.jpg">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amit Maurya",
+    "jobTitle": "Cloud & AI Security Architect",
+    "url": "https://amitwebsite.online",
+    "image": "https://avatar.amitwebsite.online/amit.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/amitmaurya",
+      "https://github.com/amitmaurya001/digital-avatar"
+    ],
+    "knowsAbout": ["Cloud Security","AI Security","AWS","Kubernetes","Zero Trust","DevSecOps"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-primary:  #070b14;
+      --bg-surface:  #0d1525;
+      --border:      #1a2540;
+      --cyan:        #00d4ff;
+      --green:       #22c55e;
+      --text-primary:#f0f4ff;
+      --text-muted:  #a0aab8;
+      --font-mono:   'JetBrains Mono', monospace;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: var(--font-mono);
+      background: var(--bg-primary);
+      overflow: hidden;
+      position: fixed;
+      top: 0; left: 0;
+    }
+
+    /* ── Full viewport shell ── */
+    .app-shell {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      width: 100%;
+    }
+
+    /* ── Single compact header ── */
+    .header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    /* Left — identity block */
+    .identity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .divider {
+      width: 1px;
+      height: 28px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    .avatar-photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--cyan);
+      object-fit: cover;
+      object-position: center center;
+      flex-shrink: 0;
+    }
+    .name-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .name-primary {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .name-sub {
+      font-size: 9px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* Right — status + nav */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      flex-shrink: 0;
+    }
+    .pulse-dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    .live-text {
+      font-size: 9px;
+      color: var(--green);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* Hamburger — mobile only */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 20px; height: 1px;
+      background: var(--text-muted);
+    }
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-mobile a:hover { color: var(--cyan); }
+
+    /* ── Chat workspace — fills everything below header ── */
+    .chat-workspace {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      min-height: 0;
+      background: var(--bg-primary);
+    }
+    .chat-workspace iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ── Loading overlay ── */
+    #loader {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      z-index: 5;
+      transition: opacity 0.4s ease;
+    }
+    #loader.hidden { opacity: 0; pointer-events: none; }
+    .spinner {
+      width: 26px; height: 26px;
+      border: 2px solid var(--border);
+      border-top-color: var(--cyan);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .loader-text {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── Animations ── */
+    @keyframes spin  { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .name-sub  { display: none; }
+      .header    { padding: 0 1rem; height: 56px; }
+    }
+
+    @media (max-width: 360px) {
+      .logo { letter-spacing: 2px; font-size: 12px; }
+      .name-primary { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Single compact header -->
+  <header class="header">
+
+    <!-- Left: identity -->
+    <div class="identity">
+      <a href="https://amitwebsite.online" class="logo">AM</a>
+      <div class="divider"></div>
+      <img
+        src="amit.jpg"
+        alt="Amit Maurya"
+        class="avatar-photo"
+      >
+      <div class="name-block">
+        <span class="name-primary">Amit Maurya</span>
+        <span class="name-sub">Digital AI Twin</span>
+      </div>
+    </div>
+
+    <!-- Right: status + nav -->
+    <div class="controls">
+      <div class="live-badge">
+        <span class="pulse-dot"></span>
+        <span class="live-text">Live</span>
+      </div>
+      <nav class="nav-links">
+        <a href="https://amitwebsite.online">Home</a>
+        <a href="https://amitwebsite.online/lab.html">AI Lab</a>
+        <a href="https://amitwebsite.online/contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- Mobile nav dropdown -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="https://amitwebsite.online">Home</a>
+    <a href="https://amitwebsite.online/lab.html">AI Lab</a>
+    <a href="https://amitwebsite.online/contact.html">Contact</a>
+  </div>
+
+  <!-- Chat workspace — full remaining height -->
+  <div class="chat-workspace">
+    <div id="loader">
+      <div class="spinner"></div>
+      <p class="loader-text">Loading Amit's Digital Twin</p>
+    </div>
+    <iframe
+      id="hf-frame"
+      src="https://amitmaurya01-amit-maurya-digital-twin.hf.space/?__theme=dark"
+      allow="microphone; clipboard-write"
+      title="Amit Maurya Digital AI Twin"
+      onload="document.getElementById('loader').classList.add('hidden')"
+    ></iframe>
+  </div>
+
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+    navMobile.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => navMobile.classList.remove('open'))
+    );
+  }
+</script>
+
+</body>
+</html>
